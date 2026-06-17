@@ -105,6 +105,19 @@ pytest
 
 Covers persistence round-trips, corrupt-file quarantine, graph traversal, relevance ranking, recency decay, and confidence weighting — all offline.
 
+## Use cases
+
+kerobox is a good fit if you're trying to:
+
+- give an **LLM agent long-term memory** that persists between calls and restarts
+- let a **chatbot remember user preferences and past conversations** across sessions
+- add a **lightweight memory layer** to a Python agent without a vector database
+- store and **recall facts by relevance** without standing up Pinecone/Chroma/Weaviate
+- build **agent state / knowledge that survives restarts** for long-running automations
+- prototype **agent memory** before committing to a heavier embedding stack
+
+A simple, dependency-free alternative to vector-DB memory for AI agents — start here, swap in embeddings later behind the same `recall()` API.
+
 ## Roadmap
 
 - Optional vector/embedding backend behind the same `recall()` API
