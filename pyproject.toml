@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kerobox"
+version = "0.1.0"
+description = "Persistent, queryable memory for AI agents: store facts with confidence, link them in a graph, recall the most relevant across sessions. Dependency-free."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["ai-agent", "memory", "llm", "agent-memory", "knowledge-graph", "persistence", "vector-alternative", "automation", "python"]
+authors = [{ name = "Elkero" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+kerobox = "kerobox.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["kerobox*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
